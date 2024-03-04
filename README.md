@@ -70,3 +70,19 @@ In FPGA-based systems, Advanced eXtensible Interface (AXI) bus protocols are wid
 - **Usage**: Utilized in advanced SoC designs with diverse communication requirements.
 
 These AXI bus protocols offer varying levels of complexity, performance, and features, enabling designers to choose the most suitable protocol for their FPGA-based systems.
+## AXI Buses Used by the AXI DMA
+
+### M_AXI_SG (Memory-Mapped to Scatter-Gather)
+- **Functionality**: Facilitates scatter-gather data transfers between the AXI DMA and memory.
+- **Description**: This bus allows the AXI DMA to perform scatter-gather operations, where multiple non-contiguous memory regions are accessed in a single transfer.
+- **Usage**: Configured by the processor to specify the scatter-gather transfer descriptors, enabling efficient data movement between memory and peripherals.
+
+### M_AXI_MM2S (Memory-Mapped to Streaming)
+- **Functionality**: Enables streaming data transfers from memory to peripherals.
+- **Description**: This bus allows the AXI DMA to read data from memory in a memory-mapped fashion and stream it out to peripherals.
+- **Usage**: Used by the AXI DMA to fetch data from DDR memory and transmit it to peripherals, such as custom IP blocks or external devices.
+
+### M_AXI_S2MM (Streaming to Memory-Mapped)
+- **Functionality**: Supports streaming data transfers from peripherals to memory.
+- **Description**: This bus allows the AXI DMA to receive data from peripherals in a streaming fashion and write it back to memory in a memory-mapped fashion.
+- **Usage**: Utilized by the AXI DMA to capture data from peripherals, such as sensors or external interfaces, and store it in DDR memory for further processing or storage.
