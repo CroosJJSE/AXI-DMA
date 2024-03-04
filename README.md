@@ -12,12 +12,25 @@ In this project:
 - The block diagram includes components like the Zynq PS with a processor and DDR memory controller, along with the AXI DMA and AXI Data FIFO in the Zynq PL.
 - Communication between the processor and the AXI DMA is facilitated through the AXI-lite bus, while DMA access to DDR memory is enabled via AXI_MM2S and AXI_S2MM buses.
 
-## Significance
-This project is significant because:
-- It showcases the implementation of a DMA-based data transfer system, which is crucial for high-performance applications.
-- Utilizing DMA reduces CPU overhead, enabling more efficient data movement within the system.
-- Understanding and implementing DMA functionalities are essential for developing complex embedded systems and accelerating data-intensive tasks.
+### Project Components
+1. **Zynq PS (Processing System)**:
+   - Includes an ARM Cortex-A9 processor and a DDR memory controller.
+2. **AXI DMA (Direct Memory Access)**:
+   - Facilitates efficient data transfer between different parts of the system.
+3. **AXI Data FIFO (First-In-First-Out)**:
+   - Acts as a temporary storage buffer for data being transferred between the AXI DMA and other components.
 
+## Communication
+Communication within the system occurs as follows:
+- **Processor to AXI DMA**: Through the AXI-lite bus, the processor configures and controls the AXI DMA, initiating data transfer operations.
+- **AXI DMA to DDR Memory**:
+  - **AXI_MM2S (Memory-Mapped to Streaming)**: Reads data from memory and streams it out to peripherals.
+  - **AXI_S2MM (Streaming to Memory-Mapped)**: Receives data from peripherals and writes it back to memory.
+
+These communication channels enable seamless data transfer between components, forming the backbone of the system's functionality.
+
+## Significance
+Understanding and implementing DMA functionalities are crucial for developing high-performance embedded systems. It allows for efficient data movement within the system, enabling tasks to be completed more quickly and effectively.
 
 # Understanding AXI Bus Protocols
 
