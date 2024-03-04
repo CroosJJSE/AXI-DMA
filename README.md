@@ -4,7 +4,10 @@
 This project demonstrates the utilization of the AXI DMA (Direct Memory Access) in Vivado, aiming to facilitate efficient data transfer within a system. The primary objective is to move data between different components without involving the CPU directly.
 
 ## DMA Functionality
-DMA, or Direct Memory Access, enables the transfer of data between memory and peripherals without CPU intervention. It enhances system performance by offloading data transfer tasks from the CPU, allowing it to focus on other computations.
+DMA stands for Direct Memory Access and a DMA engine allows you to transfer data from one part of your system to another. The simplest usage of a DMA would be to transfer data from one part of the memory to another, however a DMA engine can be used to transfer data from any data producer (eg. an ADC) to a memory, or from a memory to any data consumer (eg. a DAC).
+## OVERVIEW
+we’ll use the DMA to transfer data from memory to an IP block and back to the memory. In principle, the IP block could be any kind of data producer/consumer such as an ADC/DAC FMC, we will use a simple FIFO to create a loopback. After, you’ll be able to break the loop and insert whatever custom IP you like.  
+
 
 ## Project Description
 In this project:
