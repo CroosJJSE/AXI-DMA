@@ -8,6 +8,8 @@ DMA stands for Direct Memory Access and a DMA engine allows you to transfer data
 ## OVERVIEW
 we’ll use the DMA to transfer data from memory to an IP block and back to the memory. In principle, the IP block could be any kind of data producer/consumer such as an ADC/DAC FMC, we will use a simple FIFO to create a loopback. After, you’ll be able to break the loop and insert whatever custom IP you like.  
 
+![image](https://github.com/CroosJJSE/AXI-DMA/assets/141708783/9ce2e9d6-22b0-48ce-8147-39b4ed85ff43)
+
 
 ## Project Description
 In this project:
